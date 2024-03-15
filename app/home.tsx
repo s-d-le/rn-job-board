@@ -18,7 +18,7 @@ const Home = () => {
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: COLORS.white,
+        backgroundColor: COLORS.lightWhite,
       }}
     >
       <Stack.Screen
@@ -26,10 +26,18 @@ const Home = () => {
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
           headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+            <ScreenHeaderBtn
+              iconUrl={icons.menu}
+              dimension="60%"
+              handlePress={() => {}}
+            />
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconUrl={icons.profile} dimension="100%" />
+            <ScreenHeaderBtn
+              iconUrl={images.profile}
+              dimension="100%"
+              handlePress={() => {}}
+            />
           ),
           headerTitle: "",
         }}

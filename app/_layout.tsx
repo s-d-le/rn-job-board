@@ -8,7 +8,7 @@ import { useFonts } from "expo-font";
 import { Stack, useRouter } from "expo-router";
 
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 
 import { useColorScheme } from "@/components/useColorScheme";
 
@@ -28,6 +28,9 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    DMBold: require("../assets/fonts/DMSans-Bold.ttf"),
+    DMMedium: require("../assets/fonts/DMSans-Medium.ttf"),
+    DMRegular: require("../assets/fonts/DMSans-Regular.ttf"),
     ...FontAwesome.font,
   });
 
@@ -36,6 +39,7 @@ export default function RootLayout() {
     if (error) throw error;
   }, [error]);
 
+  //only hide the splash screen when the root view and fonts are ready
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
