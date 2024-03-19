@@ -1,5 +1,7 @@
 ReactNative job board with Expo, file-based router and RapidAPI
 
+![Cover](https://imgur.com/a/LVSaDE9)
+
 ## TODO
 
 - Image without extension from API is not displayed
