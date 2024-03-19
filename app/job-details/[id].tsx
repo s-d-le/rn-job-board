@@ -1,5 +1,5 @@
 import { Stack, useRouter, useGlobalSearchParams } from "expo-router";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -39,6 +39,10 @@ const JobDetails = () => {
     refetch();
     setRefreshing(false);
   }, []);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   const displayTabContent = () => {
     switch (activeTab) {
@@ -121,7 +125,7 @@ const JobDetails = () => {
                 setActiveTab={setActiveTab}
               />
 
-              {/* {displayTabContent()} */}
+              {displayTabContent()}
             </View>
           )}
         </ScrollView>
