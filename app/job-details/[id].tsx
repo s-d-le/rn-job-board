@@ -33,6 +33,7 @@ const JobDetails = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
   const [refreshing, setRefreshing] = useState(false);
 
+  //pull to refresh
   const onRefresh = useCallback(() => {
     setRefreshing(true);
     refetch();
@@ -60,7 +61,7 @@ const JobDetails = () => {
               handlePress={() => {}}
             />
           ),
-          headerTitle: "",
+          headerTitle: data[0]?.job_title ?? "Job Details",
         }}
       />
 
