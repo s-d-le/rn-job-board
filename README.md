@@ -1,6 +1,6 @@
 ReactNative job board with Expo, file-based router and RapidAPI
 
-![Cover](https://imgur.com/a/LVSaDE9)
+![Cover](https://i.imgur.com/z1Bvokj.png)
 
 ## TODO
 
